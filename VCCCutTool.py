@@ -12,7 +12,7 @@ def VCCCrop(input):
     width, height = img.size
     box = (LEFT_MARGIN, TOP_MARGIN, width-RIGHT_MARGIN, height-BOTTOM_MARGIN)
     all_boards = img.crop(box)
-    all_boards.save("result2.png")
+    # all_boards.save("result2.png")
     board_width = all_boards.size[0]/3
     board_height = all_boards.size[1]/4
 
