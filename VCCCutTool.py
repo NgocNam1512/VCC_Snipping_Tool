@@ -14,7 +14,7 @@ def VCCCropBorder(input, left=LEFT_MARGIN, right=RIGHT_MARGIN, top=TOP_MARGIN, b
     width, height = img.size
     box = (left, top, width-right, height-bottom)
     all_boards = img.crop(box)
-    all_boards.save("test_border.png")
+    all_boards.show(all_boards)
 
 
 def VCCCropSmallBoard(input, row=ROW, column=COLUMN, 
@@ -40,5 +40,5 @@ def VCCCropSmallBoard(input, row=ROW, column=COLUMN,
             board.save(name + "/" + name + str((ro-1)*row+col) + ".png")
 
 if __name__ == "__main__":
-    #VCCCropBorder("test-1.png")
-    VCCCropSmallBoard("test-1.png", row=3, column=1)
+    VCCCropBorder("test-1.png")
+    # VCCCropSmallBoard("test-1.png", row=3, column=1)
